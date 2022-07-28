@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>j Query Test Page</title>
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <style>
+      /*
+      #myDiv {
+        
+      }*/
+      /* div#myOtherDiv p {
+        background-color: blue;
+      } */
+      div#yetAnotherDiv li:nth-child(even) {
+        /*background-color: gray;*/
+      }
+    </style>
+  </head>
+  <body>
+    <h1>j Query Test Page</h1>
+    <div id="myDiv">This is text inside a div with an id of myDiv</div>
+    <div id="yetAnotherDiv">
+      <ul>
+        <li>I'm a list item</li>
+        <li>I'm a list item</li>
+        <li>I'm a list item</li>
+        <li>I'm a list item</li>
+      </ul>
+    </div>
+    <script>
+      $("document").ready(function () {
+        $("div#yetAnotherDiv li:nth-child(even)").css(
+          "background-color",
+          "blue"
+        );
+        $("div#yetAnotherDiv li").hide(); //hide li items
+        $("div#yetAnotherDiv")
+          .hide()
+          .fadeIn(3000, function () {
+            $("div#yetAnotherDiv li").each(function () {
+              $(this).slideDown(2000);
+            });
+          });
+      });
+    </script>
+  </body>
+</html>
