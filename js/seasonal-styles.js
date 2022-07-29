@@ -5,7 +5,7 @@ $("document").ready(function () {
     var season = $(this).attr("href");
 
     switch (season) {
-      case "Deafault":
+      case "Default":
         $("html ").css("background-color", "Black");
         $("#wear").attr("src", "images/300x400.png");
         $("#logo").attr("src", "images/four-seasons.gif");
